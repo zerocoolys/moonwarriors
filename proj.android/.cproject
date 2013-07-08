@@ -31,7 +31,7 @@
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.991472034" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1413805376" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/HelloWorld/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
@@ -49,7 +49,7 @@
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.898748423" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
-									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/HelloWorld/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
@@ -63,7 +63,7 @@
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.731367497" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1548475709" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/HelloWorld/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
@@ -99,7 +99,7 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="1">
-		<resource resourceType="PROJECT" workspacePath="/HelloWorld"/>
+		<resource resourceType="PROJECT" workspacePath="/MoonWarriors"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

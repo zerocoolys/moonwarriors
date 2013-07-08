@@ -1,4 +1,4 @@
-APPNAME="HelloWorld"
+APPNAME="MoonWarriros"
 
 # options
 

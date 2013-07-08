@@ -13,4 +13,9 @@
 *.a
 *.d
 
+**/R.java
+
+# Java file
+*.class
 */bin/*
+*/gen/*
