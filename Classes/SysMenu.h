@@ -18,7 +18,8 @@ public:
 	virtual bool init();
 
 	static cocos2d::CCScene* scene();
-
+	void onButtonEffect();
+	void update();
 //	void menuCloseCallback(CCObject* pSender);
 };
 
