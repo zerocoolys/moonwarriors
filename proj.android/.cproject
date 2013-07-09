@@ -25,45 +25,66 @@
 							</builder>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.libs.1844369373" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs">
 								<option id="org.eclipse.cdt.build.core.settings.holder.libfiles.628519629" name="Library Files" superClass="org.eclipse.cdt.build.core.settings.holder.libfiles"/>
-								<option id="org.eclipse.cdt.build.core.settings.holder.libpaths.1705781501" name="Library Paths" superClass="org.eclipse.cdt.build.core.settings.holder.libpaths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;${NDK_ROOT}/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a&quot;"/>
-								</option>
+								<option id="org.eclipse.cdt.build.core.settings.holder.libpaths.1705781501" name="Library Paths" superClass="org.eclipse.cdt.build.core.settings.holder.libpaths" valueType="libPaths"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.991472034" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1413805376" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
+									<listOptionValue builtIn="false" value="D:/Documents/GitHub/moonwarriors/proj.android/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/system/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/stlport/stlport"/>
+									<listOptionValue builtIn="false" value="J:/moonwarriors/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
-									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/system/include"/>
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
+									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/stlport/stlport"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1267721019" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=J:\cocos2d-x-2.1.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=${COCOS2DX_ROOT}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1052916547" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.2035290044" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.898748423" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
+									<listOptionValue builtIn="false" value="D:/Documents/GitHub/moonwarriors/proj.android/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/system/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/stlport/stlport"/>
+									<listOptionValue builtIn="false" value="J:/moonwarriors/proj.android/jni"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
-									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
+									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
-									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/sources/cxx-stl/stlport/stlport"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1267721019" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=J:\cocos2d-x-2.1.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=${COCOS2DX_ROOT}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.944632859" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool errorParsers="org.eclipse.cdt.core.VCErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GASErrorParser;org.eclipse.cdt.core.GLDErrorParser" id="org.eclipse.cdt.build.core.settings.holder.731367497" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
 								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1548475709" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;J:\moonwarriors\proj.android\jni&quot;"/>
+									<listOptionValue builtIn="false" value="D:/Documents/GitHub/moonwarriors/proj.android/proj.android/jni"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx"/>
+									<listOptionValue builtIn="false" value="D:/game/cocos2d-x-2.1.4/cocos2dx/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/system/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.6/libs/armeabi-v7a/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
+									<listOptionValue builtIn="false" value="D:/game/android-ndk-r8e/sources/cxx-stl/stlport/stlport"/>
+									<listOptionValue builtIn="false" value="J:/moonwarriors/proj.android/jni"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx/include"/>
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/lib/gcc/arm-linux-androideabi/4.4.3/include"/>
 									<listOptionValue builtIn="false" value="J:/cocos2d-x-2.1.4/cocos2dx"/>
@@ -71,7 +92,7 @@
 									<listOptionValue builtIn="false" value="J:/android-ndk-r8e/platforms/android-8/arch-arm/usr/include"/>
 								</option>
 								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1267721019" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=J:\cocos2d-x-2.1.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;COCOS2DX_ROOT=${COCOS2DX_ROOT}&quot;"/>
 								</option>
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1615206779" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>

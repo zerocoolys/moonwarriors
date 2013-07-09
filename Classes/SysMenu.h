@@ -13,13 +13,18 @@
 class SysMenu: public cocos2d::CCLayer {
 public:
 	// construct and desconstruct method
-	CREATE_FUNC(SysMenu);
+	CREATE_FUNC(SysMenu)
+	;
 
 	virtual bool init();
 
 	static cocos2d::CCScene* scene();
 	void onButtonEffect();
 	void update();
+	void onSettings();
+	void onAbout();
+	void onNewGame();
+
 //	void menuCloseCallback(CCObject* pSender);
 };
 

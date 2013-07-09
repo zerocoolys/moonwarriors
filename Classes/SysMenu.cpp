@@ -6,8 +6,10 @@
  */
 
 #include "SysMenu.h"
+#include "GameMaster.h"
 #include "GameConfig.h"
 #include "SimpleAudioEngine.h"
+#include "AboutLayer.h"
 
 using namespace cocos2d;
 //for audio
@@ -46,10 +48,11 @@ bool SysMenu::init() {
 
 	winSize = CCDirector::sharedDirector()->getWinSize();
 
-	CCSprite* pLoading = CCSprite::create("res/loading.png");
+	CCSprite* pLoading = CCSprite::create(RES_LOADING);
 	pLoading->setAnchorPoint(ccp(0,0));
+//	pLoading->setPosition(ccp(0,0));
 
-	this->addChild(pLoading, 0);
+	this->addChild(pLoading, 0, 1);
 
 	CCSprite* logo = CCSprite::create("res/logo.png");
 	logo->setAnchorPoint(ccp(0,0));
@@ -81,15 +84,34 @@ bool SysMenu::init() {
 			newGameSelected, newGameDisable, this,
 			menu_selector(SysMenu::onButtonEffect));
 
-	CCMenu* mainMenu = CCMenu::create(newGame);
+	CCMenuItemSprite* gameSettings = CCMenuItemSprite::create(
+			gameSettingsNormal, gameSettingsSelected, gameSettingsDisabled,
+			this, menu_selector(SysMenu::onSettings));
+	CCMenuItemSprite* about = CCMenuItemSprite::create(aboutNormal,
+			aboutSelected, aboutDisabled, this,
+			menu_selector(SysMenu::onAbout));
+
+	CCMenu* mainMenu = CCMenu::create(newGame, gameSettings, about, NULL);
 	mainMenu->alignItemsVerticallyWithPadding(10);
 	this->addChild(mainMenu, 1, 2);
 	mainMenu->setPosition(winSize.width / 2, winSize.height / 2);
 
-	this->schedule(schedule_selector(SysMenu::update),0.1);
+	this->schedule(schedule_selector(SysMenu::update), 0.1);
 
-    _ship = CCSprite::createWithSpriteFrameName("res/ship01.png");
+	_ship = CCSprite::createWithSpriteFrameName("ship01.png");
 
+	this->addChild(_ship, 0, 4);
+	CCPoint pos = ccp(rand()* winSize.width, 0);
+	_ship->setPosition(pos);
+	_ship->runAction(
+			CCMoveBy::create(2,
+					ccp(rand()* winSize.width, pos.y + winSize.height + 100)));
+
+	if (SOUND) {
+		SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.7);
+		SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+				"res/Music/mainMainMusic.mp3", true);
+	}
 	return true;
 }
 void SysMenu::update() {
@@ -105,6 +127,25 @@ void SysMenu::update() {
 void SysMenu::onButtonEffect() {
 	if (SOUND) {
 		SimpleAudioEngine::sharedEngine()->playEffect(
-				"/res/Music/buttonEffet.mp3");
+				"res/Music/buttonEffet.mp3");
 	}
+}
+
+void SysMenu::onNewGame() {
+	//load resources
+}
+
+void SysMenu::onSettings() {
+//	onButtonEffect();
+//	CCScene* scene = CCScene::create();
+//	scene.addChild(SettingsLayer.create());
+//	cc.Director.getInstance().replaceScene(
+//			cc.TransitionFade.create(1.2, scene));
+}
+void SysMenu::onAbout() {
+	onButtonEffect();
+	CCScene* scene = CCScene::create();
+	scene->addChild(AboutLayer::create());
+	CCDirector::sharedDirector()->replaceScene(
+			CCTransitionFade::create(1.2, scene));
 }

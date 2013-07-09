@@ -3,6 +3,7 @@
 #include "cocos2d.h"
 #include "SysMenu.h"
 
+#include "CCEGLView.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -15,10 +16,13 @@ AppDelegate::~AppDelegate() {
 bool AppDelegate::applicationDidFinishLaunching() {
 	// initialize director
 	CCDirector *pDirector = CCDirector::sharedDirector();
+
 	pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
 
 	CCSize screenSize = CCEGLView::sharedOpenGLView()->getFrameSize();
-	CCSize designSize = CCSizeMake(480,320);
+	CCSize designSize = CCSizeMake(320,480);
+
+	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(designSize.width,designSize.height,kResolutionNoBorder);
 	// turn on display FPS
 	pDirector->setDisplayStats(true);
 
