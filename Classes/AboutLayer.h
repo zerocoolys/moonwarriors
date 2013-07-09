@@ -9,16 +9,15 @@
 #define ABOUTLAYER_H_
 
 #include "cocos2d.h"
-
+#include "LayerMacros.h"
 class AboutLayer: public cocos2d::CCLayer {
 public:
 	CREATE_FUNC(AboutLayer)
 	;
 
-	static cocos2d::CCScene* scene();
-	virtual bool init();
+	INIT_METHOD
+	;
 	void onBackButton();
-
 };
 
 #endif /* ABOUTLAYER_H_ */

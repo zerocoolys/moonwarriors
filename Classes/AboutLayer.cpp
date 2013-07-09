@@ -9,6 +9,7 @@
 #include "GameConfig.h"
 #include "SysMenu.h"
 #include "ccTypes.h"
+#include "MenuMaster.h"
 
 using namespace cocos2d;
 
@@ -70,8 +71,9 @@ bool AboutLayer::init() {
 }
 
 void AboutLayer::onBackButton() {
-	CCScene* scene = CCScene::create();
-	scene->addChild(SysMenu::create());
-	CCDirector::sharedDirector()->replaceScene(
-			CCTransitionFade::create(1.2, scene));
+	MenuMaster::backToSysMenu();
+//	CCScene* scene = CCScene::create();
+//	scene->addChild(SysMenu::create());
+//	CCDirector::sharedDirector()->replaceScene(
+//			CCTransitionFade::create(1.2, scene));
 }

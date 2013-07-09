@@ -10,6 +10,9 @@
 #include "GameConfig.h"
 #include "SimpleAudioEngine.h"
 #include "AboutLayer.h"
+#include "SettingsLayer.h"
+#include "LayerMacros.h"
+#include "MusicMaster.h"
 
 using namespace cocos2d;
 //for audio
@@ -18,25 +21,27 @@ using namespace CocosDenshion;
 CCSprite* _ship;
 CCSize winSize;
 
-CCScene* SysMenu::scene() {
+SCENE_METHOD(SysMenu);
 
-	CCScene * scene = NULL;
-	do {
-		// 'scene' is an autorelease object
-		scene = CCScene::create();
-		CC_BREAK_IF(! scene);
-
-		// 'layer' is an autorelease object
-		SysMenu *layer = SysMenu::create();
-		CC_BREAK_IF(! layer);
-
-		// add layer as a child to scene
-		scene->addChild(layer);
-	} while (0);
-
-	// return the scene
-	return scene;
-}
+//CCScene* SysMenu::scene() {
+//
+//	CCScene * scene = NULL;
+//	do {
+//		// 'scene' is an autorelease object
+//		scene = CCScene::create();
+//		CC_BREAK_IF(! scene);
+//
+//		// 'layer' is an autorelease object
+//		SysMenu *layer = SysMenu::create();
+//		CC_BREAK_IF(! layer);
+//
+//		// add layer as a child to scene
+//		scene->addChild(layer);
+//	} while (0);
+//
+//	// return the scene
+//	return scene;
+//}
 
 bool SysMenu::init() {
 	if (!CCLayer::init()) {
@@ -56,7 +61,7 @@ bool SysMenu::init() {
 
 	CCSprite* logo = CCSprite::create("res/logo.png");
 	logo->setAnchorPoint(ccp(0,0));
-	logo->setPosition(ccp(0,250));
+	logo->setPosition(ccp(0,260));
 	this->addChild(logo, 10, 1);
 
 	CCSprite* newGameNormal = CCSprite::create("res/menu.png",
@@ -82,7 +87,7 @@ bool SysMenu::init() {
 
 	CCMenuItemSprite* newGame = CCMenuItemSprite::create(newGameNormal,
 			newGameSelected, newGameDisable, this,
-			menu_selector(SysMenu::onButtonEffect));
+			menu_selector(SysMenu::onNewGame));
 
 	CCMenuItemSprite* gameSettings = CCMenuItemSprite::create(
 			gameSettingsNormal, gameSettingsSelected, gameSettingsDisabled,
@@ -107,10 +112,11 @@ bool SysMenu::init() {
 			CCMoveBy::create(2,
 					ccp(rand()* winSize.width, pos.y + winSize.height + 100)));
 
-	if (SOUND) {
-		SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.7);
-		SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
-				"res/Music/mainMainMusic.mp3", true);
+	if (GameConfig::sound) {
+//		SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.7);
+//		SimpleAudioEngine::sharedEngine()->playBackgroundMusic(
+//				"res/Music/mainMainMusic.mp3", true);
+		MusicMaster::playBackgroundMusicLoop(RES_MAIN_MENU_MP3);
 	}
 	return true;
 }
@@ -125,22 +131,18 @@ void SysMenu::update() {
 }
 
 void SysMenu::onButtonEffect() {
-	if (SOUND) {
-		SimpleAudioEngine::sharedEngine()->playEffect(
-				"res/Music/buttonEffet.mp3");
-	}
+	GameMaster::playEffectOneTime(RES_BUTTON_CLICK_MP3);
 }
 
 void SysMenu::onNewGame() {
-	//load resources
 }
 
 void SysMenu::onSettings() {
-//	onButtonEffect();
-//	CCScene* scene = CCScene::create();
-//	scene.addChild(SettingsLayer.create());
-//	cc.Director.getInstance().replaceScene(
-//			cc.TransitionFade.create(1.2, scene));
+	onButtonEffect();
+	CCScene* scene = CCScene::create();
+	scene->addChild(SettingsLayer::create());
+	CCDirector::sharedDirector()->replaceScene(
+			CCTransitionFade::create(1.2, scene));
 }
 void SysMenu::onAbout() {
 	onButtonEffect();

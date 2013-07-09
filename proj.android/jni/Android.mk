@@ -4,14 +4,20 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := game_shared
 
+CLASS_PATH := ../../Classes
 LOCAL_MODULE_FILENAME := libgame
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
-                   ../../Classes/AppDelegate.cpp \
+                   ${CLASS_PATH}/AppDelegate.cpp \
                    ../../Classes/SysMenu.cpp \
                    ../../Classes/GameMaster.cpp \
-                   ../../Classes/AboutLayer.cpp
-                   
+                   ../../Classes/AboutLayer.cpp \
+                   ../../Classes/SettingsLayer.cpp \
+                   ../../Classes/ResourceManager.cpp \
+                   ../../Classes/MusicMaster.cpp \
+                   ${CLASS_PATH}/MenuMaster.cpp \
+                   ${CLASS_PATH}/GameConfig.cpp
+                                      
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static cocosdenshion_static
