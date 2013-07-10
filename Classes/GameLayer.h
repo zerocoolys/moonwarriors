@@ -18,6 +18,7 @@ public:
 
 	INIT_METHOD
 	;
+	static GameLayer* instance = NULL;
 
 private:
 	unsigned int _state;

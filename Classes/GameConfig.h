@@ -34,6 +34,7 @@ public:
 	static CCArray* ENEMIES;
 	static CCArray* ENEMIES_BULLETS;
 	static CCArray* PLAYER_BULLETS;
+	static CCArray* HITS;
 
 	static const int LIFEUP_SOURCE[];
 

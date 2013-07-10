@@ -26,7 +26,12 @@ class Bullet: public cocos2d::CCSprite {
 	;
 
 public:
-	void ctor(unsigned int bulletSpeed, )
+	void ctor(unsigned int bulletSpeed, WeaponType weaponType,
+			EnemyAttackMode attackMode);
+	void update(float dt);
+	void destroy();
+	void hurt();
+	void collideRect(cocos2d::CCPoint point);
 };
 
 #endif /* BULLET_H_ */

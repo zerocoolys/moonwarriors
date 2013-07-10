@@ -14,6 +14,8 @@ using namespace cocos2d;
 CCSpriteBatchNode* _texOpaqueBatch;
 CCSpriteBatchNode* _texTransparentBatch;
 
+static GameLayer* instance = NULL;
+
 SCENE_METHOD(GameLayer);
 
 bool GameLayer::init() {
@@ -43,5 +45,11 @@ bool GameLayer::init() {
 
 	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
 
+	instance = this;
+
 }
 
+
+static GameLayer* GameLayer::sharedGameLayer(){
+
+}
