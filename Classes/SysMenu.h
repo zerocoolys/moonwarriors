@@ -24,6 +24,7 @@ public:
 	void onSettings();
 	void onAbout();
 	void onNewGame();
+	void loadFinished();
 
 //	void menuCloseCallback(CCObject* pSender);
 };

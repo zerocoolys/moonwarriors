@@ -23,9 +23,7 @@ void MusicMaster::playBackgroundMusicOneTime(const char* fileName) {
 }
 
 void MusicMaster::stopBackgroundMusic() {
-	if (GameConfig::sound) {
-		SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
-	}
+	SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
 }
 
 void MusicMaster::playEffectLoop(const char* fileName) {

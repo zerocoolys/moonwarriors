@@ -16,8 +16,12 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/ResourceManager.cpp \
                    ../../Classes/MusicMaster.cpp \
                    ${CLASS_PATH}/MenuMaster.cpp \
-                   ${CLASS_PATH}/GameConfig.cpp
-                                      
+                   ${CLASS_PATH}/GameConfig.cpp \
+                   ${CLASS_PATH}/GameLayer.cpp \
+                   ${CLASS_PATH}/GameControlMenu.cpp \
+                   ${CLASS_PATH}/sprites/Enemy.cpp \
+                   ${CLASS_PATH}/config/EnemyType.cpp   
+                                                      
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static cocosdenshion_static

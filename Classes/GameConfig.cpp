@@ -7,16 +7,28 @@
 
 #include "GameConfig.h"
 
-bool sound = true;
+bool GameConfig::sound = true;
+
+CCArray* GameConfig::ENEMIES;
+CCArray* GameConfig::ENEMIES_BULLETS;
+CCArray* GameConfig::PLAYER_BULLETS;
+
+const int GameConfig::LIFEUP_SOURCE[] = { 50000, 100000 };
 
 bool GameConfig::getSound() {
-	return sound;
+	return GameConfig::sound;
 }
 void GameConfig::setSound(bool sound) {
-	sound = sound;
+	GameConfig::sound = sound;
 }
 
-void GameConfig::changeSound(){
-	sound = !sound;
+void GameConfig::changeSound() {
+	GameConfig::sound = !GameConfig::sound;
+}
+
+void GameConfig::initArray() {
+	GameConfig::ENEMIES = CCArray::create();
+	GameConfig::ENEMIES_BULLETS = CCArray::create();
+	GameConfig::PLAYER_BULLETS = CCArray::create();
 }
 

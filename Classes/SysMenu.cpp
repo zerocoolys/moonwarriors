@@ -13,6 +13,8 @@
 #include "SettingsLayer.h"
 #include "LayerMacros.h"
 #include "MusicMaster.h"
+#include "GameControlMenu.h"
+#include "GameLayer.h"
 
 using namespace cocos2d;
 //for audio
@@ -135,6 +137,24 @@ void SysMenu::onButtonEffect() {
 }
 
 void SysMenu::onNewGame() {
+	onButtonEffect();
+	SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(RES_BG_MP3);
+
+	SimpleAudioEngine::sharedEngine()->preloadEffect(RES_EFFECT_BTN);
+	SimpleAudioEngine::sharedEngine()->preloadEffect(RES_EFFECT_EXPLODE);
+	SimpleAudioEngine::sharedEngine()->preloadEffect(RES_EFFECT_FIR);
+	SimpleAudioEngine::sharedEngine()->preloadEffect(RES_EFFECT_SHIP_DEST);
+
+	CCTextureCache::sharedTextureCache()->addImageAsync("res/", this,
+			callfuncO_selector(SysMenu::loadFinished));
+}
+
+void SysMenu::loadFinished() {
+	CCScene* scene = CCScene::create();
+	scene->addChild(GameLayer::create());
+	scene->addChild(GameControlMenu::create());
+	CCDirector::sharedDirector()->replaceScene(
+			CCTransitionFade::create(1.2, scene));
 }
 
 void SysMenu::onSettings() {

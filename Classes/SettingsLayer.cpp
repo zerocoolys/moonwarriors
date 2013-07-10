@@ -71,7 +71,7 @@ bool SettingsLayer::init() {
 void SettingsLayer::onSoundControl() {
 	GameConfig::changeSound();
 
-	if (GameConfig::sound) {
+	if (GameConfig::getSound()) {
 		MusicMaster::playBackgroundMusicLoop(RES_MAIN_MENU_MP3);
 	} else {
 		MusicMaster::stopBackgroundMusic();
@@ -79,7 +79,7 @@ void SettingsLayer::onSoundControl() {
 }
 
 void SettingsLayer::onModeControl() {
-
+ // TODO difficult mode
 }
 
 void SettingsLayer::onBackButton() {
