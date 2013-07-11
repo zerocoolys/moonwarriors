@@ -10,6 +10,8 @@
 
 #include "cocos2d.h"
 #include "LayerMacros.h"
+#include "sprites/HitEffect.h"
+#include "sprites/Enemy.h"
 
 class GameLayer: public cocos2d::CCLayer {
 public:
@@ -18,9 +20,13 @@ public:
 
 	INIT_METHOD
 	;
-	static GameLayer* instance = NULL;
+	static GameLayer* sharedGameLayer();
 
+	void addBulletHits(HitEffect* hit, int zOrder);
+	void addEnemy(Enemy* enemy, int z , int tag);
+//	void addExplosions(Expl)
 private:
+	static GameLayer* instance;
 	unsigned int _state;
 };
 

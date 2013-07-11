@@ -23,3 +23,7 @@
 	} while (0); \
 	return scene; \
 }
+
+#define INIT_ARRAY(__NAME__) if(!__NAME__){ \
+	__NAME__ = cocos2d::CCArray::create(); \
+	}

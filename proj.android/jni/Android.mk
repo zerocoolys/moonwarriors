@@ -20,7 +20,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ${CLASS_PATH}/GameLayer.cpp \
                    ${CLASS_PATH}/GameControlMenu.cpp \
                    ${CLASS_PATH}/sprites/Enemy.cpp \
-                   ${CLASS_PATH}/config/EnemyType.cpp   
+                   ${CLASS_PATH}/config/EnemyType.cpp \
+                   ${CLASS_PATH}/sprites/HitEffect.cpp  
                                                       
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes                   
 

@@ -8,7 +8,7 @@
 #ifndef ENEMYTYPE_H_
 #define ENEMYTYPE_H_
 
-#include "GameConfig.h"
+#include "cocos2d.h"
 #include "../GameType.h"
 
 class EnemyType {

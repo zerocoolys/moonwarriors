@@ -6,15 +6,7 @@
  */
 
 #include "SysMenu.h"
-#include "GameMaster.h"
 #include "GameConfig.h"
-#include "SimpleAudioEngine.h"
-#include "AboutLayer.h"
-#include "SettingsLayer.h"
-#include "LayerMacros.h"
-#include "MusicMaster.h"
-#include "GameControlMenu.h"
-#include "GameLayer.h"
 
 using namespace cocos2d;
 //for audio
@@ -133,7 +125,7 @@ void SysMenu::update() {
 }
 
 void SysMenu::onButtonEffect() {
-	GameMaster::playEffectOneTime(RES_BUTTON_CLICK_MP3);
+	MusicMaster::playEffectOneTime(RES_BUTTON_CLICK_MP3);
 }
 
 void SysMenu::onNewGame() {

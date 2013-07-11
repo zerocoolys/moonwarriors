@@ -8,7 +8,6 @@
 #include "AboutLayer.h"
 #include "GameConfig.h"
 #include "SysMenu.h"
-#include "ccTypes.h"
 #include "MenuMaster.h"
 
 using namespace cocos2d;

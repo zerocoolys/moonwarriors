@@ -14,8 +14,6 @@ using namespace cocos2d;
 CCSpriteBatchNode* _texOpaqueBatch;
 CCSpriteBatchNode* _texTransparentBatch;
 
-static GameLayer* instance = NULL;
-
 SCENE_METHOD(GameLayer);
 
 bool GameLayer::init() {
@@ -44,12 +42,22 @@ bool GameLayer::init() {
 	this->addChild(_texTransparentBatch);
 
 	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-
-	instance = this;
-
 }
 
+GameLayer* GameLayer::instance = NULL;
 
-static GameLayer* GameLayer::sharedGameLayer(){
+GameLayer* GameLayer::sharedGameLayer() {
+	if (GameLayer::instance == NULL) {
+		GameLayer::instance = new GameLayer();
+		GameLayer::instance->init();
+	}
+	return GameLayer::instance;
+}
 
+void GameLayer::addBulletHits(HitEffect* hit, int zOrder) {
+	_texOpaqueBatch->addChild(hit, zOrder);
+}
+
+void GameLayer::addEnemy(Enemy* enemy, int z, int tag) {
+	_texTransparentBatch->addChild(enemy, z, tag);
 }

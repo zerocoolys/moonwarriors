@@ -9,6 +9,13 @@
 #define SYSMENU_H_
 
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
+#include "AboutLayer.h"
+#include "SettingsLayer.h"
+#include "LayerMacros.h"
+#include "MusicMaster.h"
+#include "GameControlMenu.h"
+#include "GameLayer.h"
 
 class SysMenu: public cocos2d::CCLayer {
 public:

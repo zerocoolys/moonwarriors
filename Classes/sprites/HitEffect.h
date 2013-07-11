@@ -17,7 +17,7 @@ public:
 	void ctor();
 	void destroy();
 
-	static void getorCreateHitEffect(cocos2d::CCPoint pos, float rotation,
+	HitEffect* getOrCreateHitEffect(cocos2d::CCPoint pos, float rotation,
 			float scale);
 
 	bool active;

@@ -7,10 +7,18 @@
 
 #include "GameMaster.h"
 #include "GameConfig.h"
+#include "LayerMacros.h"
 #include "SimpleAudioEngine.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;
+
+GameMaster::GameMaster() {
+	g_hideSpritePos = ccp(-10,-10);
+}
+
+GameMaster::~GameMaster() {
+}
 
 CCSprite* GameMaster::getBackground() {
 	CCSprite* sp = CCSprite::create(RES_LOADING);
@@ -46,3 +54,47 @@ void GameMaster::playEffectOneTime(const char* fileName) {
 	}
 }
 
+GameMaster* s_GameMaster = NULL;
+
+GameMaster* GameMaster::sharedGameMaster() {
+	if (!s_GameMaster) {
+		s_GameMaster = new GameMaster();
+	}
+	return s_GameMaster;
+}
+
+CCArray* GameMaster::getEnemies() {
+	INIT_ARRAY(ENEMIES);
+	return ENEMIES;
+}
+
+void GameMaster::setEnemies(CCArray* array) {
+	ENEMIES = array;
+}
+
+CCArray* GameMaster::getEnemiesBullets() {
+	INIT_ARRAY(ENEMIES_BULLETS);
+	return ENEMIES_BULLETS;
+}
+
+void GameMaster::setEnemiesBullets(CCArray* array) {
+	ENEMIES_BULLETS = array;
+}
+
+CCArray* GameMaster::getHits() {
+	INIT_ARRAY(HITS);
+	return HITS;
+}
+
+void GameMaster::setHits(CCArray* array) {
+	HITS = array;
+}
+
+CCArray* GameMaster::getPlayerBullets() {
+	INIT_ARRAY(PLAYER_BULLETS);
+	return PLAYER_BULLETS;
+}
+
+void GameMaster::setPlayerBullets(CCArray* array) {
+	PLAYER_BULLETS = array;
+}
